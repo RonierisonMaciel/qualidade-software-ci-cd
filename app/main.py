@@ -8,7 +8,7 @@ app = FastAPI()
 # Function to root
 @app.get("/")
 async def root():
-    return {"message": "Bem vindo a API de tarefas!"}
+    return {"message": "olá, qual a demanda de hoje ?"}
 
 # Function to get all tasks
 @app.get("/tasks")
