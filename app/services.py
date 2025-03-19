@@ -22,4 +22,4 @@ def update_task(task_id: int, update_task: Task):
 def delete_task(task_id: int):
     global tasks
     tasks = [task for task in tasks if task.id != task_id]
-    return {"message": "Task removida com sucesso!"}
+    return {"message": "Task deletada com sucesso!"}
