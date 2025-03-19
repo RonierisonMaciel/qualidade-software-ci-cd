@@ -25,15 +25,15 @@ async def create_task(task: Task):
 async def read_task(task_id: int):
     task = get_tasks(task_id)
     if not task:
-        return HTTPException(status_code=404, detail="Task not encontrada")
+        return HTTPException(status_code=404, detail="Task não encontrada")
     return task
 
 # Function to update a task
 @app.put("/tasks/{task_id}")
-async def update_task(task_id: int):
+async def update_task_main(task_id: int):
     return update_task(task_id)
 
 # Function to delete a task
 @app.delete("/tasks/{task_id}")
-async def delete_task(task_id: int):
+async def delete_task_main(task_id: int):
     return delete_task(task_id)
