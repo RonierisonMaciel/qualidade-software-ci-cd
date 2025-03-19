@@ -9,8 +9,8 @@ def test_get_task():
     assert get_tasks(1)
 
 def test_update_task():
-    update_task = Task(id=1, title="Title Task", description="Task Description", status=True)
-    assert update_task(1, update_task) == update_task
+    update_tasks = Task(id=1, title="Title Task", description="Task Description", status=True)
+    assert update_task(1, update_tasks) == update_tasks
 
 def test_delete_task():
     assert delete_task(1) == {"message": "Task deletada com sucesso!"}
