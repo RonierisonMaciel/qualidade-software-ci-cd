@@ -30,8 +30,8 @@ async def read_task(task_id: int):
 
 # Function to update a task
 @app.put("/tasks/{task_id}")
-async def update_task_main(task_id: int):
-    return update_task(task_id)
+async def update_task_main(task_id: int, task: Task):
+    return update_task(task_id, task)
 
 # Function to delete a task
 @app.delete("/tasks/{task_id}")
