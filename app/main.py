@@ -18,6 +18,8 @@ async def list_tasks():
 # Function to create a task
 @app.post("/tasks")
 async def create_task(task: Task):
+    if task in tasks:
+        return HTTPException(status_code=400, detail="Task já existente")
     return add_task(task)
 
 # Function to get a task
